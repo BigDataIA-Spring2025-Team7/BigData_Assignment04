@@ -1,0 +1,525 @@
+2025-03-15 11:29:38,438 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:29:43,363 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:29:43,386 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:29:43,386 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:29:43,386 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:29:43,387 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:30:10,006 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:30:15,666 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:30:15,672 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:30:15,672 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:30:15,672 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:30:15,675 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:39:59,745 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:40:09,069 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:40:09,092 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:40:09,092 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:40:09,093 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:40:09,094 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:40:09,094 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBNuHpl6DhQW645STYRtwIhxBL41c', created=1742053205, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_f9f4fb6dbf', choices=[Choices(finish_reason='stop', index=0, message=Message(content="In the document, the decoder is described as part of the Transformer model's architecture. It is composed of a stack of N = 6 identical layers, similar to the encoder. Each layer in the decoder has two sub-layers, and an additional third sub-layer that performs multi-head attention over the output of the encoder stack. This allows every position in the decoder to attend over all positions in the input sequence. The decoder uses residual connections around each of the sub-layers, followed by layer normalization. The self-attention sub-layer in the decoder stack is specifically modified to prevent positions from attending to subsequent positions, ensuring that predictions for a given position depend only on known outputs at positions before it, maintaining the auto-regressive property.", role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=148, prompt_tokens=8724, total_tokens=8872, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=0, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 11:40:09,094 - INFO - Model: GPT-4o Mini | Tokens Used: 8872 | Cost: $0.000000
+2025-03-15 11:42:21,114 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:42:29,278 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:42:29,299 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:42:29,300 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:42:29,301 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBNwTbZXNuqmjB36Oh4KbyhjfoR8d', created=1742053341, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_f9f4fb6dbf', choices=[Choices(finish_reason='stop', index=0, message=Message(content='The architecture of the model proposed in the document is known as the Transformer model. It uses a network structure based entirely on attention mechanisms and does not include recurrent or convolutional components. Key elements of the Transformer architecture include:\n\n1. **Encoder-Decoder Structure**: \n   - Both encoder and decoder have a stack of identical layers.\n   - The encoder transforms the input sequence into a sequence of continuous representations, while the decoder generates the output sequence one symbol at a time.\n\n2. **Layers in Encoder and Decoder**:\n   - Each layer in the encoder and decoder consists of a multi-head self-attention mechanism and a position-wise fully connected feed-forward network.\n   - Residual connections are used around each of the sub-layers, followed by layer normalization.\n\n3. **Self-Attention Mechanism**:\n   - The model relies entirely on self-attention mechanisms, which allow for modeling dependencies regardless of their distance in the input or output sequences.\n   - Multi-Head Attention: This involves using multiple attention layers running in parallel to allow the model to focus on different parts of the input simultaneously.\n\n4. **Positional Encoding**:\n   - Positional encodings are added to the input embeddings to inject information about the position of the tokens in the sequence.\n\n5. **Parameter and Configuration Details**:\n   - The model is typically implemented with 6 layers in both encoder and decoder stacks.\n   - Self-attention uses multiple heads (8 heads in the base model configuration).\n   - Dimensionality of the input and output is set to \\(d_{model} = 512\\) for the base model.\n\n6. **Attention Variants in the Model**:\n   - The model uses three types of multi-head attention: encoder-decoder attention, encoder self-attention, and decoder self-attention with masking to preserve auto-regressive properties.\n\n7. **Feed-Forward Networks**:\n   - Each feed-forward network contains two linear transformations with a ReLU activation in between.\n\nThis architecture allows the Transformer model to achieve high parallelization during training and significantly reduces the time required compared to recurrent models.', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=426, prompt_tokens=8728, total_tokens=9154, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 11:42:29,300 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:42:29,302 - INFO - Model: GPT-4o Mini | Tokens Used: 9154 | Cost: $0.000000
+2025-03-15 11:42:29,303 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:46:51,648 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:46:56,899 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:46:56,955 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:46:56,956 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:46:56,956 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:46:56,957 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:47:11,363 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:47:15,646 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:47:15,650 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:47:15,650 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:47:15,650 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:47:15,653 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:47:37,396 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:47:41,549 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:47:41,552 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:47:41,553 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:47:41,553 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:47:41,554 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBO1Z8idUwKPt1Kcys5WJRv3bIyrH', created=1742053657, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_f9f4fb6dbf', choices=[Choices(finish_reason='stop', index=0, message=Message(content='Attention, in the context of the document, refers to an integral part of sequence modeling and transduction models that allows modeling of dependencies without regard to their distance in the input or output sequences. It is an attention function that maps a query and a set of key-value pairs to an output by computing a weighted sum of the values, where the weights are determined by a compatibility function of the query with the corresponding key.\n\nThe document describes "Scaled Dot-Product Attention" as a specific attention mechanism where the input consists of queries, keys, and values, and the output is computed by taking the dot product of the query with all keys, dividing each by the square root of the dimension of the keys, and applying a softmax function to obtain the weights on the values. Attention mechanisms allow for significant parallelization and are crucial in models like the Transformer, which dispense with recurrence and convolutions entirely, instead relying solely on attention mechanisms to draw global dependencies between input and output.', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=195, prompt_tokens=8725, total_tokens=8920, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 11:47:41,554 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:47:41,554 - INFO - Model: GPT-4o Mini | Tokens Used: 8920 | Cost: $0.000000
+2025-03-15 11:54:56,439 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:55:00,442 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:55:00,467 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:55:00,468 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:55:00,468 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:55:00,470 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:55:39,464 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:55:43,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:55:43,757 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:55:43,758 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:55:43,758 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:55:43,759 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:56:08,938 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 11:56:12,122 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 11:56:12,126 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 11:56:12,127 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:56:12,127 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 11:56:12,127 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBO9p8u0f04tp6VYpfZQLJBI06uj7', created=1742054169, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_f9f4fb6dbf', choices=[Choices(finish_reason='stop', index=0, message=Message(content='Attention, in the context of the document, is described as a mechanism that maps a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is computed as a weighted sum of the values, with the weight assigned to each value determined by a compatibility function of the query with the corresponding key. This mechanism allows the model to focus on different parts of the input sequence to generate an output, enabling the modeling of dependencies without regard to their distance in the input or output sequences. This contrasts with traditional recurrent and convolutional networks which typically rely on sequential processing. The Transformer model utilizes attention mechanisms, such as Scaled Dot-Product Attention and Multi-Head Attention, to draw global dependencies and improve computational efficiency and parallelization.', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=161, prompt_tokens=8725, total_tokens=8886, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 11:56:12,129 - INFO - Model: GPT-4o Mini | Tokens Used: 8886 | Cost: $0.000000
+2025-03-15 11:56:12,129 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:03:05,978 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:03:09,321 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:03:09,343 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:03:09,343 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:03:09,343 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:03:09,344 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:03:24,697 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:03:27,938 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:03:27,942 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:03:27,942 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:03:27,942 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:03:27,943 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBOGr0jU0mEeLT05HUa9gz7G9tphy', created=1742054605, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_f9f4fb6dbf', choices=[Choices(finish_reason='stop', index=0, message=Message(content="The decoder in the Transformer model is composed of a stack of N = 6 identical layers. In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack. Similar to the encoder, the decoder employs residual connections around each of the sub-layers, followed by layer normalization. The model has been modified such that the self-attention sub-layer in the decoder stack prevents positions from attending to subsequent positions, ensuring that the predictions for position i can depend only on the known outputs at positions less than i. This setup is crucial for maintaining the auto-regressive property, which is characteristic of the model's operation during sequence generation.", role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=146, prompt_tokens=8725, total_tokens=8871, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 12:03:27,944 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:03:27,944 - INFO - Model: GPT-4o Mini | Tokens Used: 8871 | Cost: $0.000000
+2025-03-15 12:09:11,984 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:09:16,100 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:09:16,124 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:09:16,125 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:09:16,125 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:09:16,126 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:09:47,847 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:09:53,113 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:09:53,117 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:09:53,118 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:09:53,118 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:09:53,118 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBON2GucadTOcuh2TBRxbirjb5tlO', created=1742054988, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_f9f4fb6dbf', choices=[Choices(finish_reason='stop', index=0, message=Message(content="The decoder in the Transformer model is composed of a stack of N = 6 identical layers. Each decoder layer includes three sub-layers: a multi-head self-attention mechanism, a multi-head attention over the encoder stack's output, and a simple, position-wise fully connected feed-forward network. The decoder is designed to generate an output sequence of symbols one element at a time, and it is auto-regressive, consuming the previously generated symbols as additional input when generating the next. It includes modifications to prevent positions from attending to subsequent positions, ensuring that predictions for a position only depend on known outputs at positions less than the current position.", role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=128, prompt_tokens=8725, total_tokens=8853, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 12:09:53,120 - INFO - Model: GPT-4o Mini | Tokens Used: 8853 | Cost: $0.000000
+2025-03-15 12:09:53,119 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:15:53,545 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:15:57,329 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:15:57,355 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:15:57,356 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:15:57,356 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:15:57,357 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:16:01,832 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:16:06,235 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:16:06,239 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:16:06,240 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:16:06,240 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:16:06,242 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:16:45,755 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:16:59,003 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:16:59,006 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:16:59,007 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:16:59,007 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:16:59,008 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBOTmoDdaxG0dcovUwzrKol6WTaxl', created=1742055406, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_f9f4fb6dbf', choices=[Choices(finish_reason='stop', index=0, message=Message(content="The architecture of the model, referred to as the Transformer, is based entirely on attention mechanisms, removing the need for any recurrent or convolutional components. The key components of the model's architecture are as follows:\n\n1. **Encoder-Decoder Structure**: The Transformer follows the conventional encoder-decoder structure. Both the encoder and the decoder are composed of multiple identical layers. \n\n2. **Encoder**: \n   - The encoder consists of a stack of N = 6 identical layers.\n   - Each layer has two main sub-layers: a multi-head self-attention mechanism and a fully connected feed-forward network.\n   - Residual connections are employed around each sub-layer, followed by layer normalization.\n\n3. **Decoder**:\n   - The decoder is also composed of a stack of N = 6 identical layers.\n   - Each layer includes three sub-layers: a multi-head self-attention mechanism, multi-head attention over the encoder’s output, and a feed-forward network.\n   - Like the encoder, it uses residual connections and layer normalization.\n   - To ensure the auto-regressive property, the decoder is modified by masking to prevent positions from attending to subsequent positions.\n\n4. **Self-Attention**:\n   - Self-attention allows for computing representations by relating different positions of the input sequence to each other.\n   - In the encoder and decoder, positions can attend to all other positions in the sequence.\n\n5. **Multi-Head Attention**:\n   - Multi-head attention consists of several attention mechanisms operating in parallel, allowing the model to focus on different positions at once.\n\n6. **Position-wise Feed-Forward Networks**:\n   - Each encoder and decoder layer includes a feed-forward network applied to each position separately and identically. It consists of two linear transformations with a ReLU activation in between.\n\n7. **Positional Encoding**:\n   - Since the model has no recurrence, positional encodings are added to the input embeddings to provide information about the position of tokens in the sequence.\n\n8. **Overall Framework**:\n   - The encoder maps an input sequence of symbols to a continuous representation.\n   - The decoder, using the encoder outputs, generates an output sequence one symbol at a time in an auto-regressive manner.\n\nThe Transformer’s architecture allows for greater parallelization and effectively learns global dependencies, making it superior to previous models relying on recurrence and convolution, especially in tasks like machine translation.", role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=487, prompt_tokens=8727, total_tokens=9214, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 12:16:59,008 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:16:59,009 - INFO - Model: GPT-4o Mini | Tokens Used: 9214 | Cost: $0.000000
+2025-03-15 12:21:33,046 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:21:37,478 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:21:37,511 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:21:37,511 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:21:37,511 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:21:37,512 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:21:49,092 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:21:52,510 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:21:52,514 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:21:52,514 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:21:52,516 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBOYf1lPSBV2nxn3ePHJPFzQoJtrE', created=1742055709, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_eb9dce56a8', choices=[Choices(finish_reason='stop', index=0, message=Message(content='Attention, in the context of the document, is described as a mechanism that maps a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is computed as a weighted sum of the values, with weights determined by a compatibility function of the query with the corresponding key. The document specifically introduces "Scaled Dot-Product Attention" and describes its functionality in the context of the Transformer model, emphasizing its use as a part of a network architecture for sequence transduction tasks like machine translation. The attention mechanism allows modeling of dependencies without regard to their distance in the input or output sequences, thus making it a critical component in reducing sequential computation constraints typically found in recurrent neural networks.', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=150, prompt_tokens=8725, total_tokens=8875, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=0, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 12:21:52,516 - INFO - Model: GPT-4o Mini | Tokens Used: 8875 | Cost: $0.000000
+2025-03-15 12:21:52,517 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:26:19,048 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:26:23,989 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:26:24,011 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:26:24,012 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:26:24,012 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:26:24,013 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:26:24,013 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBOd1GJDwfE6ncXVdb6sLHXTbIjvh', created=1742055979, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_eb9dce56a8', choices=[Choices(finish_reason='stop', index=0, message=Message(content='In the context of the document, the decoder is a component of the Transformer model architecture, which follows an encoder-decoder structure. The decoder is composed of a stack of N = 6 identical layers. Each layer in the decoder has a multi-head self-attention mechanism and also incorporates a third sub-layer that performs multi-head attention over the output of the encoder stack. Similar to the encoder, the decoder uses residual connections around each sub-layer, followed by layer normalization. Additionally, the self-attention sub-layer in the decoder prevents positions from attending to subsequent positions to ensure that the predictions for a position depend only on the known outputs at positions less than the current one, preserving the auto-regressive property.', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=142, prompt_tokens=8725, total_tokens=8867, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 12:26:24,014 - INFO - Model: GPT-4o Mini | Tokens Used: 8867 | Cost: $0.000000
+2025-03-15 12:26:56,494 - INFO - Gemini Response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "The decoder, given z (the output of the encoder), generates an output sequence (y1,...,ym) of symbols one element at a time.  At each step the model is auto-regressive, consuming the previously generated symbols as additional input when generating the next.  The Transformer's decoder is composed of a stack of N = 6 identical layers, each with three sub-layers: a multi-head self-attention mechanism, a sub-layer performing multi-head attention over the encoder stack's output, and a position-wise fully connected feed-forward network.  The decoder's self-attention sub-layer is modified to prevent positions from attending to subsequent positions.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "citation_metadata": {
+            "citation_sources": [
+              {
+                "start_index": 50,
+                "end_index": 217,
+                "uri": "https://blog.paperspace.com/attention-is-all-you-need-the-components-of-the-transformer/"
+              },
+              {
+                "start_index": 102,
+                "end_index": 255,
+                "uri": "https://www.nutanix.dev/2023/05/24/train-transformer-models-on-nutanix/"
+              }
+            ]
+          },
+          "avg_logprobs": -0.03289414123750069
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 8917,
+        "candidates_token_count": 142,
+        "total_token_count": 9059
+      },
+      "model_version": "gemini-1.5-pro-002"
+    }),
+)
+2025-03-15 12:26:56,495 - INFO - Model: Gemini Flash Free | Tokens Used: 0 | Cost: $0.000000
+2025-03-15 12:32:03,554 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:32:11,724 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:32:11,746 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:32:11,746 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:32:11,746 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:32:11,747 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:32:11,747 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBOiaOBHbLDRHVgU5zerty3Eh1OqF', created=1742056324, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_eb9dce56a8', choices=[Choices(finish_reason='stop', index=0, message=Message(content='The document describes the architecture of the Transformer model, which is a sequence transduction model based entirely on attention mechanisms, specifically self-attention, and eschews recurrence and convolution entirely. Here is a summary of its architecture:\n\n1. **Overall Structure**: The Transformer uses an encoder-decoder architecture.\n   - **Encoder**: The encoder consists of a stack of N=6 identical layers. Each layer has two sub-layers: a multi-head self-attention mechanism, and a position-wise fully connected feed-forward network. A residual connection is employed around each of the two sub-layers, followed by layer normalization.\n   - **Decoder**: The decoder is also composed of a stack of N=6 identical layers. It has an additional third sub-layer, which performs multi-head attention over the output of the encoder stack. The decoder uses a masking mechanism to prevent positions from attending to subsequent positions, ensuring the auto-regressive property.\n\n2. **Attention Mechanism**:\n   - **Self-Attention**: Relates different positions of a single sequence to compute a representation of the sequence. \n   - **Scaled Dot-Product Attention**: The dot products of the queries with all keys are computed, divided by the dimension of the keys, and applied to a softmax function to obtain weights on the values.\n   - **Multi-Head Attention**: Instead of performing a single attention function with d-dimensional keys, values, and queries, the Transformer projects the queries, keys, and values linearly to multiple dimensions and performs the attention function in parallel.\n\n3. **Position-wise Feed-Forward Networks**: Each layer in the encoder and decoder contains a feed-forward network applied separately and identically to each position, consisting of two linear transformations with a ReLU activation.\n\n4. **Positional Encoding**: To enable the model to make use of the order of the sequence, positional encodings are added to the input embeddings of the encoder and decoder stacks. These encodings use sine and cosine functions of different frequencies.\n\nThis architecture allows the Transformer to outperform other models by reducing sequential computation, enhancing parallelization, and achieving better performance while being more efficient in training.', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=439, prompt_tokens=8725, total_tokens=9164, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 12:32:11,748 - INFO - Model: GPT-4o Mini | Tokens Used: 9164 | Cost: $0.000000
+2025-03-15 12:32:26,432 - INFO - Gemini Response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "The Transformer is a new network architecture based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.  It follows an encoder-decoder structure.  The encoder is composed of a stack of 6 identical layers, each with two sub-layers: a multi-head self-attention mechanism and a simple, position-wise fully connected feed-forward network.  The decoder is also composed of a stack of 6 identical layers, but inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack.  The Transformer uses multi-head attention in three ways: encoder-decoder attention, encoder self-attention, and decoder self-attention.  Position-wise feed-forward networks, embeddings, softmax, and positional encodings are also employed.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "citation_metadata": {
+            "citation_sources": [
+              {
+                "start_index": 219,
+                "end_index": 381,
+                "uri": "https://wap.sciencenet.cn/blog-362400-1372850.html?mobile=1"
+              },
+              {
+                "start_index": 307,
+                "end_index": 433,
+                "uri": "https://1library.net/document/zgg75ovz-design-implementation-consecutive-interpreting-based-transformer-nmt-model.html"
+              },
+              {
+                "start_index": 437,
+                "end_index": 560,
+                "uri": "https://repositori.upf.edu/bitstream/handle/10230/45219/aburaed_sciento_auto.pdf;jsessionid=32C4EA4F6053E249347C21CA549A0F62?sequence=1"
+              }
+            ]
+          },
+          "avg_logprobs": -0.059014278650283816
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 8917,
+        "candidates_token_count": 160,
+        "total_token_count": 9077
+      },
+      "model_version": "gemini-1.5-pro-002"
+    }),
+)
+2025-03-15 12:32:26,432 - INFO - Model: Gemini Flash Free | Tokens Used: 0 | Cost: $0.000000
+2025-03-15 12:33:14,687 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:33:17,051 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:33:17,054 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:33:17,055 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:33:17,055 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:33:17,057 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:33:40,699 - INFO - Gemini Response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Attention is described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors.  The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "citation_metadata": {
+            "citation_sources": [
+              {
+                "start_index": 13,
+                "end_index": 314,
+                "uri": "https://www.nutanix.dev/2023/05/24/train-transformer-models-on-nutanix/"
+              }
+            ]
+          },
+          "avg_logprobs": -0.004272832589990953
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 8921,
+        "candidates_token_count": 68,
+        "total_token_count": 8989
+      },
+      "model_version": "gemini-1.5-pro-002"
+    }),
+)
+2025-03-15 12:33:40,699 - INFO - Model: Gemini Flash Free | Tokens Used: 0 | Cost: $0.000000
+2025-03-15 12:38:02,546 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:38:04,655 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:38:04,675 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:38:04,676 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:38:04,676 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:38:04,677 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:38:15,269 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 12:38:21,758 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 12:38:21,761 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 12:38:21,761 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:38:21,761 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:38:21,762 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBOoZ47gSErenscFvvDMXGchoY533', created=1742056695, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_eb9dce56a8', choices=[Choices(finish_reason='stop', index=0, message=Message(content='The architecture proposed in the document is called the Transformer. It is a novel network architecture designed for sequence transduction tasks that relies entirely on attention mechanisms. The Transformer architecture discards recurrent and convolutional layers entirely, which are typically used in traditional sequence transduction models. The key components of the Transformer architecture are:\n\n1. **Encoder-Decoder Architecture**: Like most competitive sequence transduction models, the Transformer uses an encoder-decoder structure. The encoder maps an input sequence to a sequence of continuous representations, and the decoder generates an output sequence from these representations.\n\n2. **Self-Attention and Point-Wise, Fully Connected Layers**: Both encoder and decoder are composed of stacked layers that utilize self-attention mechanisms and point-wise, fully connected feed-forward networks. This setup allows for global dependencies between input and output to be modeled efficiently.\n\n3. **Multi-Head Attention**: This mechanism allows the model to attend to different representational subspaces at different positions simultaneously, enhancing the parallelization capability of the model.\n\n4. **Positional Encoding**: Since the Transformer has no recurrence or convolution to handle order, it uses positional encodings added to the input embeddings to provide some information about the position of tokens in the sequence.\n\n5. **Residual Connections and Layer Normalization**: These are employed around each of the sub-layers (attention and feed-forward networks) to facilitate training by allowing gradients to flow through the layers more effectively.\n\nThe model is designed for high parallelization and computational efficiency, making it significantly faster to train as compared to RNN or CNN-based architectures, especially on tasks such as machine translation.', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=327, prompt_tokens=8725, total_tokens=9052, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 12:38:21,764 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 12:38:21,764 - INFO - Model: GPT-4o Mini | Tokens Used: 9052 | Cost: $0.000000
+2025-03-15 14:39:30,069 - INFO - Gemini Response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "An attention function maps a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors.  The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "citation_metadata": {
+            "citation_sources": [
+              {
+                "start_index": 27,
+                "end_index": 307,
+                "uri": "https://www.nutanix.dev/2023/05/24/train-transformer-models-on-nutanix/"
+              }
+            ]
+          },
+          "avg_logprobs": -0.0007307630087902297
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 8916,
+        "candidates_token_count": 67,
+        "total_token_count": 8983
+      },
+      "model_version": "gemini-1.5-pro-002"
+    }),
+)
+2025-03-15 14:39:30,071 - INFO - Model: Gemini Flash Free | Tokens Used: 0 | Cost: $0.000000
+2025-03-15 14:48:34,714 - INFO - Gemini Response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "The decoder is also composed of a stack of N = 6 identical layers. In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack. Similar to the encoder, the decoder employs residual connections around each of the sub-layers, followed by layer normalization.  The self-attention sub-layer in the decoder stack is modified to prevent positions from attending to subsequent positions. This masking, combined with the fact that the output embeddings are offset by one position, ensures that the predictions for position i can depend only on the known outputs at positions less than i.  Given z (the output of the encoder), the decoder generates an output sequence (y1,...,ym) of symbols one element at a time. At each step the model is auto-regressive, consuming the previously generated symbols as additional input when generating the next.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "citation_metadata": {
+            "citation_sources": [
+              {
+                "end_index": 231,
+                "uri": "https://blog.paperspace.com/attention-is-all-you-need-the-components-of-the-transformer/"
+              },
+              {
+                "start_index": 237,
+                "end_index": 359,
+                "uri": "https://gptstore.ai/gpts/Yi3N6wOHnF-arxiv-xplorer/fhTSzFIRmd"
+              },
+              {
+                "start_index": 333,
+                "end_index": 518,
+                "uri": "https://www.lamsalashish.com.np/blog/attention-is-all-you-need"
+              },
+              {
+                "start_index": 522,
+                "end_index": 686,
+                "uri": "https://blog.usejournal.com/part1-bert-for-advance-nlp-with-transformers-in-pytorch-357579d63512"
+              },
+              {
+                "start_index": 739,
+                "end_index": 905,
+                "uri": "https://blog.paperspace.com/attention-is-all-you-need-the-components-of-the-transformer/"
+              },
+              {
+                "start_index": 791,
+                "end_index": 943,
+                "uri": "https://www.nutanix.dev/2023/05/24/train-transformer-models-on-nutanix/"
+              }
+            ]
+          },
+          "avg_logprobs": -0.015159259344402112
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 8917,
+        "candidates_token_count": 190,
+        "total_token_count": 9107
+      },
+      "model_version": "gemini-1.5-pro-002"
+    }),
+)
+2025-03-15 14:48:34,715 - INFO - Model: Gemini Flash Free | Tokens Used: 0 | Cost: $0.000000
+2025-03-15 14:48:45,049 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 14:48:51,746 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 14:48:51,768 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 14:48:51,769 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:48:51,769 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:48:51,770 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:48:51,770 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBQquZ7YrKnBnJDB7obfY6WNzFnor', created=1742064528, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_f9f4fb6dbf', choices=[Choices(finish_reason='stop', index=0, message=Message(content='In the document, the decoder is a component of the Transformer model architecture used for sequence transduction tasks, such as machine translation. It consists of a stack of identical layers that work alongside the encoder to process input data and generate the output sequence. Each layer in the decoder has three sub-layers:\n\n1. A multi-head self-attention mechanism.\n2. A fully connected feed-forward network.\n3. A multi-head attention mechanism over the output of the encoder stack.\n\nThe decoder also employs residual connections around each of these sub-layers followed by layer normalization, and includes a mechanism to prevent positions from attending to subsequent positions to maintain the auto-regressive property. This ensures that the predictions for a given position depend only on the known outputs at positions prior to it.', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=154, prompt_tokens=8725, total_tokens=8879, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=0, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 14:48:51,770 - INFO - Model: GPT-4o Mini | Tokens Used: 8879 | Cost: $0.000000
+2025-03-15 14:54:38,530 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 14:54:40,967 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 14:54:40,985 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 14:54:40,986 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:54:40,986 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:54:40,986 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:54:53,872 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 14:54:56,082 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 14:54:56,086 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 14:54:56,086 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:54:56,087 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:54:56,089 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:55:21,659 - INFO - Gemini Response: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "The Transformer model is a novel architecture that eschews recurrence and convolutions entirely, relying solely on an attention mechanism to draw global dependencies between input and output. It follows an encoder-decoder structure.\n\n* **Encoder:** Composed of a stack of 6 identical layers. Each layer has two sub-layers: a multi-head self-attention mechanism and a simple, position-wise fully connected feed-forward network. Residual connections and layer normalization are employed around each sub-layer.\n\n* **Decoder:** Also composed of a stack of 6 identical layers. In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack.  Residual connections and layer normalization are used around each sub-layer.  The self-attention sub-layer is modified with masking to prevent positions from attending to subsequent positions, maintaining the auto-regressive property.\n\n* **Attention:**  The core of the model is the \"Scaled Dot-Product Attention\" mechanism.  This computes attention weights based on the dot products of queries and keys, scaled down, and then applies a softmax function.  The output is a weighted sum of the values. The model uses \"Multi-Head Attention,\" which linearly projects the queries, keys, and values multiple times and performs the attention function in parallel on these projections.\n\n* **Position-wise Feed-Forward Networks:** Each layer in the encoder and decoder contains a fully connected feed-forward network applied to each position separately and identically.  It consists of two linear transformations with a ReLU activation in between.\n\n* **Embeddings and Softmax:** Learned embeddings convert input and output tokens to vectors. A shared weight matrix is used for the embedding layers and the pre-softmax linear transformation.\n\n* **Positional Encoding:** Since the model lacks recurrence and convolution, positional encodings are added to the input embeddings to provide information about token order.  Sine and cosine functions of different frequencies are used for positional encoding.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "citation_metadata": {
+            "citation_sources": [
+              {
+                "start_index": 274,
+                "end_index": 414
+              },
+              {
+                "start_index": 375,
+                "end_index": 496,
+                "uri": "https://www.biorxiv.org/content/10.1101/2023.07.04.547619v2.full-text"
+              },
+              {
+                "start_index": 524,
+                "end_index": 672,
+                "uri": "https://1library.net/document/zgg75ovz-design-implementation-consecutive-interpreting-based-transformer-nmt-model.html"
+              },
+              {
+                "start_index": 622,
+                "end_index": 764,
+                "uri": "https://foundationsofdl.com/2022/03/01/sota_object_detection/"
+              },
+              {
+                "start_index": 1426,
+                "end_index": 1549,
+                "uri": "https://github.com/niclaswue/arxiv-smry"
+              },
+              {
+                "start_index": 1551,
+                "end_index": 1687,
+                "uri": "https://medium.com/nerd-for-tech/day-120-dl-attention-is-all-you-need-an-intro-to-transformers-8a6f82033640"
+              }
+            ]
+          },
+          "avg_logprobs": -0.07688766516349166
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 8919,
+        "candidates_token_count": 414,
+        "total_token_count": 9333
+      },
+      "model_version": "gemini-1.5-pro-002"
+    }),
+)
+2025-03-15 14:55:21,660 - INFO - Model: Gemini Flash Free | Tokens Used: 0 | Cost: $0.000000
+2025-03-15 14:55:36,334 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 14:55:43,321 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 14:55:43,325 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 14:55:43,325 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:55:43,325 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:55:43,326 - INFO - GPT-4o Response: ModelResponse(id='chatcmpl-BBQxUgluwL0RVcfkJ1Rovyy87HOso', created=1742064936, model='gpt-4o-2024-08-06', object='chat.completion', system_fingerprint='fp_f9f4fb6dbf', choices=[Choices(finish_reason='stop', index=0, message=Message(content='The architecture of the model described in the document is the Transformer, a novel network architecture for sequence transduction tasks that relies entirely on attention mechanisms, eschewing recurrence and convolution entirely. Here\'s a breakdown of the Transformer\'s architecture:\n\n1. **Encoder-Decoder Structure**: The Transformer follows an encoder-decoder structure where:\n   - The encoder is responsible for mapping an input sequence to a sequence of continuous representations.\n   - The decoder uses these representations along with the previously generated symbols to generate the output sequence in an autoregressive manner.\n\n2. **Encoder**: Composed of a stack of six identical layers, each layer has two sub-layers:\n   - Multi-head self-attention mechanism\n   - Position-wise fully connected feed-forward network\n  \n   Each sub-layer includes a residual connection followed by layer normalization.\n\n3. **Decoder**: Similarly, the decoder consists of a stack of six identical layers. In addition to the two sub-layers present in each encoder layer, each decoder layer has a third sub-layer:\n   - Multi-head attention mechanism over the output of the encoder stack.\n  \n   Just like the encoder, the decoder employs residual connections followed by layer normalization. The self-attention mechanism in the decoder is modified to prevent positions from attending to subsequent positions, ensuring the autoregressive property.\n\n4. **Attention Mechanism**:\n   - The Transformer uses a scaled dot-product attention where queries, keys, and values are matrices, and attention is computed using a softmax function.\n   - Multi-head attention is employed to allow the model to attend to information from different representation subspaces.\n  \n5. **Multi-Head Attention**: Instead of a single attention function, the Transformer uses multiple attention "heads," each with its own projection of the queries, keys, and values. These are computed in parallel and concatenated to yield the final result.\n\n6. **Feed-Forward Networks**: Each layer in both the encoder and decoder contains a fully connected feed-forward network applied independently to each position. This consists of two linear transformations with a ReLU activation in between.\n\n7. **Positional Encoding**: Since the model does not intrinsically capture the order of the sequence, positional encodings are added to the input embeddings to give the model information about the position of each word in the sentence.\n\nThe document states that the Transformer model achieves significant improvements in terms of parallelization and training efficiency, reaching a new state-of-the-art performance on translation tasks.', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None, 'annotations': []}))], usage=Usage(completion_tokens=495, prompt_tokens=8727, total_tokens=9222, completion_tokens_details=CompletionTokensDetailsWrapper(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0, text_tokens=None), prompt_tokens_details=PromptTokensDetailsWrapper(audio_tokens=0, cached_tokens=8704, text_tokens=None, image_tokens=None)), service_tier='default')
+2025-03-15 14:55:43,327 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-15 14:55:43,327 - INFO - Model: GPT-4o Mini | Tokens Used: 9222 | Cost: $0.000000
+2025-03-15 15:04:19,503 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 15:04:19,781 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-15 15:04:19,782 - INFO - Retrying request to /chat/completions in 0.430224 seconds
+2025-03-15 15:04:20,354 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-15 15:04:20,355 - INFO - Retrying request to /chat/completions in 0.854356 seconds
+2025-03-15 15:04:21,327 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-15 15:04:21,358 - ERROR - Error processing LLM request: litellm.RateLimitError: RateLimitError: OpenAIException - Request too large for gpt-4o in organization org-o4WdHvH0eHjHFA034MIvUj5a on tokens per min (TPM): Limit 30000, Requested 143057. The input or output tokens must be reduced in order to run successfully. Visit https://platform.openai.com/account/rate-limits to learn more.
+2025-03-15 15:04:34,263 - ERROR - Error processing LLM request: 429 Resource has been exhausted (e.g. check quota).
+2025-03-15 15:05:46,705 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 15:05:46,715 - INFO - Claude Response: Message(id='msg_01S5W29fFh6dSCGmU6UXV9Dw', content=[TextBlock(citations=None, text="Based on the document, the risk factors for NVIDIA Corporation are organized into several key categories:\n\n1. Risks Related to Industry and Markets:\n- Failure to meet evolving needs of industry and markets\n- Intense competition that could adversely impact market share and financial results\n\n2. Risks Related to Demand, Supply, and Manufacturing:\n- Long manufacturing lead times and uncertain supply\n- Difficulty estimating customer demand accurately\n- Potential mismatches between supply and demand\n- Dependency on third-party suppliers\n- Potential product defects that could incur significant expenses\n\n3. Risks Related to Global Operating Business:\n- Adverse economic conditions\n- International sales and operational risks\n- Cybersecurity and data breaches\n- Business disruptions\n- Climate change impacts\n- Potential challenges integrating business investments or acquisitions\n- Concentration of revenue from limited partners/distributors\n- Challenges attracting and retaining key employees\n- Potential disruptions to business processes and information systems\n\n4. Risks Related to Regulatory, Legal, and Stock Matters:\n- Complex laws and export control restrictions\n- Scrutiny regarding corporate sustainability practices\n- Issues with responsible use of AI technologies\n- Intellectual property protection challenges\n- Data privacy and security law compliance\n- Potential tax liability changes\n- Exposure to litigation and regulatory proceedings\n- Potential barriers to change in corporate control\n\nThe document emphasizes that these risk factors could harm NVIDIA's business, financial condition, results of operations, and reputation if they materialize.", type='text')], model='claude-3-5-haiku-20241022', role='assistant', stop_reason='end_turn', stop_sequence=None, type='message', usage=Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=129194, output_tokens=332))
+2025-03-15 15:05:46,716 - INFO - Model: Claude-3.5 Haiku | Tokens Used: 0 | Cost: $0.000000
+2025-03-20 20:47:43,603 - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-20 20:47:46,199 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-20 20:47:46,224 - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-20 20:47:46,224 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-20 20:47:46,225 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
+2025-03-20 20:47:46,226 - INFO - selected model name for cost calculation: openai/gpt-4o-2024-08-06
