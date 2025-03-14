@@ -217,11 +217,11 @@ PyMuPDF (fitz)
 
 Contributions
 
-Vemana Anil Kumar - 33%
+Vemana Anil Kumar - 50%
 
-Ashwin Badamikar - 33%
+Ashwin Badamikar - 25%
 
-Madhura Adadande - 33%
+Madhura Adadande - 25%
 
 WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 
