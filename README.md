@@ -50,7 +50,8 @@ With the rapid growth of digital documents, especially in PDF formats, accessing
 
 ## **ARCHITECTURE DIAGRAM:**
 
-![Assignment4_Part1](https://github.com/user-attachments/assets/85938056-2566-466d-9bc0-e745c451b9cb)
+![Assignment4_Part1](https://github.com/user-attachments/assets/8141654a-bff3-4cf1-91b3-c49dc01e4d2b)
+
 
 
 
