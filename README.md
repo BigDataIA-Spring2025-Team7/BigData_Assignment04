@@ -1,6 +1,6 @@
 # BigData_Assignment04.1
 
-**PDF & Markdown Chatbot with LLM**
+## **PDF & Markdown Chatbot with LLM**
 
 Vemana Anil Kumar
 
@@ -18,11 +18,11 @@ streamlit: http://0.0.0.0:8501
  
 application URL: http://34.46.62.44:8502
  
-**INTRODUCTION**
+## **INTRODUCTION**
 
 In this project, we aim to enhance our existing document analysis pipeline by integrating Large Language Models (LLMs) to enable intelligent summarization and Q&A functionalities. The enhanced system builds on our previous assignment by incorporating a user-friendly Streamlit frontend, a robust FastAPI backend, and seamless communication with LLMs via LiteLLM. Users can upload or select parsed PDF documents, ask questions, and receive context-aware answers or document summaries. All components are containerized using Docker and deployed to the cloud using DigitalOcean, ensuring a scalable and production-ready architecture. This solution empowers users to extract insights from documents interactively, leveraging the power of modern LLMs in a real-time application.
 
-**Technologies:**
+## **Technologies:**
 
 Frontend Application: Streamlit
 
@@ -42,11 +42,20 @@ Deployment: DigitalOcean
 
 Logging & Monitoring: Standard Python logging (with extensible support for error handling and performance tracking)
 
-**PROBLEM STATEMENT**
+## **PROBLEM STATEMENT**
 
 With the rapid growth of digital documents, especially in PDF formats, accessing relevant information from lengthy and unstructured files has become increasingly time-consuming. The challenge is to create an intelligent system that can automatically extract, summarize, and answer questions based on the content of uploaded documents. Traditional methods lack the ability to provide contextual responses or interactive summaries. This project addresses the need for a scalable, automated solution by integrating advanced LLMs through a seamless frontend-backend architecture. The key challenge lies in orchestrating components for real-time processing, maintaining low latency, ensuring accuracy, and supporting multiple LLM providers with minimal setup effort.
 
-**PROOF OF CONCEPT**
+
+
+## **ARCHITECTURE DIAGRAM:**
+
+![Assignment4_Part1](https://github.com/user-attachments/assets/85938056-2566-466d-9bc0-e745c451b9cb)
+
+
+
+
+## **PROOF OF CONCEPT**
 
 Our application is a full-stack platform that allows users to upload or select previously processed PDF files and interactively query them using state-of-the-art Large Language Models (LLMs). The architecture is modular and can be broken down into three core layers:
 
@@ -61,14 +70,14 @@ Our application is a full-stack platform that allows users to upload or select p
 Challenges and Optimizations:
  Handling large PDF files posed a latency challenge during markdown conversion and LLM processing. We optimized this by caching markdown results and integrating error-handling and retry logic in the LiteLLM calls. Token pricing and usage details are transparently shown to the user after each query, aiding cost visibility and user awareness. Communication bottlenecks between the frontend and backend were resolved by tuning Redis Streams and applying response compression techniques in FastAPI.
 
-**ARCHITECTURE DIAGRAM:**
 
 
 
 
 
 
-**WALKTHROUGH OF THE APPLICATION**
+
+## **WALKTHROUGH OF THE APPLICATION**
 
 Open this link: http://34.46.62.44:8502/ to access the deployed application.
 
@@ -84,7 +93,7 @@ For backend testing and debugging:
 
 Access the FastAPI interactive API documentation here: http://0.0.0.0:8000/docs
 
-**APPLICATION WORKFLOW**
+## **APPLICATION WORKFLOW**
 
 The application workflow is designed to provide an interactive user experience for document analysis using LLMs, orchestrated through a modular backend and real-time processing. Here's a step-by-step breakdown of the workflow:
 
@@ -136,8 +145,8 @@ Deployment & Scalability:
 All components (Streamlit, FastAPI, Redis, LiteLLM) run inside Docker containers.
 The entire stack is deployed on a Google Cloud droplet for production accessibility.
 
-**DIRECTORY STRUCTURE**
-
+## **DIRECTORY STRUCTURE**
+```
 BigData_Assignment04.1/
 │
 ├── backend/
@@ -169,8 +178,8 @@ BigData_Assignment04.1/
 ├── .gitignore
 ├── docker-compose.yaml           
 ├── README.md
-
-**REFERENCES**
+```
+## **REFERENCES**
 
 Streamlit
 
@@ -213,15 +222,15 @@ PyMuPDF (fitz)
 
  PDF Text Extraction: https://pymupdf.readthedocs.io/en/latest/
 
-**DISCLOSURES**
+## **DISCLOSURES**
 
 Contributions
 
-Vemana Anil Kumar - 50%
+Vemana Anil Kumar - 60%
 
-Ashwin Badamikar - 25%
+Ashwin Badamikar - 20%
 
-Madhura Adadande - 25%
+Madhura Adadande - 20%
 
 WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 
