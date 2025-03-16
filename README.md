@@ -226,6 +226,11 @@ PyMuPDF (fitz)
  PDF Text Extraction: https://pymupdf.readthedocs.io/en/latest/
 
 ## **DISCLOSURES**
+Contributions
+
+Vemana Anil Kumar - 60%<br>
+Ashwin Badamikar - 20%<br>
+Madhura Adadande - 20%<br>
 
 WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 
