@@ -9,14 +9,10 @@ Ashwin Badamikar
 Madhura Sunil Adadande
 
 **LIVE LINKS**
-
-fastapi: http://0.0.0.0:8000
-
-streamlit: http://0.0.0.0:8501
  
  redis: port 6379
  
-application URL: http://34.46.62.44:8502
+application URL(streamlit): http://34.46.62.44:8502
 
 Codelabs Link : https://codelabs-preview.appspot.com/?file_id=1onzZthH2AI72qgMpsv3t4V8WDCT_bsVicoxIT6cvyBg#0
  
