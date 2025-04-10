@@ -34,9 +34,9 @@ Document Processing: PyMuPDF, Markdown conversion
 
 Data Transfer and Communication: Redis Streams
 
-Containerization: Docker, Docker Compose
+Containerization: Docker, GCP
 
-Deployment: DigitalOcean
+Deployment: GCP
 
 Logging & Monitoring: Standard Python logging (with extensible support for error handling and performance tracking)
 
